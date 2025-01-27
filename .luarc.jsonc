@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime.version": "LuaJIT",
+  "workspace.library": [
+    "$VIMRUNTIME", // Make the server aware of Neovim runtime files,
+    "./deps/" // With plugin depedencies
+  ],
+  // Get the language server to recognize the `vim` global
+  "diagnostics.globals": [
+    "vim"
+  ]
+}
