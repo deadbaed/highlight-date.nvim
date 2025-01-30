@@ -83,9 +83,9 @@ end
 --- @param string string
 --- @return Time|nil
 local function parse_time(string)
-    -- TODO: parse optional timezone
-    local pattern = "T?" .. TIME_REGEX
-    local hour, minute, second = string:match(pattern)
+    -- TODO: parse optional timezone + add offset to date/time
+    local pattern = DATE_REGEX .. "T?" .. TIME_REGEX
+    local _, _, _, hour, minute, second = string:match(pattern)
     return check_time(hour, minute, second)
 end
 

@@ -26,7 +26,4 @@ T["YYYY-MM-DDThh:mm:ss"]["parses"] = function(input)
     eq(parsed, { date = { year = 2025, month = 01, day = 30 }, time = { hour = 18, minute = 54, second = 03 } })
 end
 
--- print(dump(M.parse_iso("some 2026-03-21T21:52:38+01:00 noise")))
--- print(dump(M.parse_iso("some 1996-12-19T16:39:57-08:00[America/Los_Angeles] noise")))
-
 return T
